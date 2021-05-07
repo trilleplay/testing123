@@ -1,0 +1,13 @@
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  hello_world_job:
+    if: github.event.pull_request.merged == 'true'
+    runs-on: ubuntu-latest
+    name: Lets go
+    steps:
+    - name: Hello world action step
+      id: hello
+      uses: trilleplay/dababy-pr@v0
